@@ -84,12 +84,12 @@ const fragmentShader = `
     float y2 = noise((uv + vec2(-0.3, 0.4)) * 0.45 - t * 0.05);
     float yellowBlend = smoothstep(0.45, 0.7, ((y1 + y2) / 2.0) * 0.5 + 0.5);
 
-    vec3 c1 = vec3(0.980, 0.961, 0.941);  // #FAF5F0
-    vec3 c2 = vec3(1.000, 0.922, 0.843);  // #FFEBD7
-    vec3 c3 = vec3(1.000, 0.878, 0.788);  // #FFE0C9
-    vec3 c4 = vec3(0.902, 0.992, 1.000);  // #E6FDFF
-    vec3 c5 = vec3(1.000, 0.922, 0.843);  // #FFEBD7 (duplicate of c2)
-    vec3 c6 = vec3(1.000, 0.878, 0.788);  // #FFE0C9 (duplicate of c3)
+       vec3 c1 = vec3(0.990, 0.975, 0.965);  // lighter #FAF5F0 → ~#FCF9F6
+    vec3 c2 = vec3(1.000, 0.945, 0.880);  // lighter #FFEBD7 → ~#FFF1E0
+    vec3 c3 = vec3(1.000, 0.910, 0.835);  // lighter #FFE0C9 → ~#FFE9D5
+    vec3 c4 = vec3(0.940, 0.995, 1.000);  // lighter #E6FDFF → ~#F0FEFF
+    vec3 c5 = vec3(1.000, 0.945, 0.880);  // duplicate of c2
+    vec3 c6 = vec3(1.000, 0.910, 0.835);  // duplicate of c3
 
     vec3 color = mix(c1, c2, smoothstep(0.0, 0.3, redBlend));
     color = mix(color, c3, smoothstep(0.2, 0.6, redBlend));
