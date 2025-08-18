@@ -85,10 +85,10 @@ const fragmentShader = `
     float yellowBlend = smoothstep(0.45, 0.7, ((y1 + y2) / 2.0) * 0.5 + 0.5);
 
     vec3 c1 = vec3(0.980, 0.961, 0.941);  // #FAF5F0
-    vec3 c2 = vec3(0.940, 0.995, 1.000);  // #F0FEFF
+    vec3 c2 = vec3(1.0, 1.0, 1.0);  // #FFFFFF
     vec3 c3 = vec3(1.000, 0.932, 0.880);  // #FFEDE0
-    vec3 c4 = vec3(0.940, 0.995, 1.000);  // #F0FEFF
-    vec3 c5 = vec3(1.000, 0.932, 0.880);  // #FFEDE0
+    vec3 c4 = vec3(0.980, 0.961, 0.941);  // #FAF5F0
+    vec3 c5 = vec3(1.000, 0.932, 1);  // #FFEDE0
     vec3 c6 = vec3(1.000, 0.932, 0.880);  // duplicate of c3
 
     vec3 color = mix(c1, c2, smoothstep(0.0, 0.3, redBlend));
